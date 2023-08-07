@@ -9,32 +9,76 @@ h1 {
 }
               pre code {
   background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
+    display: inline-block;
+
 }
         </style>
        </head>
 <body style="background-color: powderblue;">
             <h1 style="color: rgb(11, 11, 173); text-align:center; font-size: 5vw;">ch10 hop</h1>
-  <h2 style="font-size: 3vw;">no 1</h2>
+  <h2 style="font-size: 4vw;">no 1</h2>
 <pre>
   <code>
-    class student:
-    name=[]
-    mark=[]
-    def __init__(self):
-        self.n=int(input("enter the no of students:"))
-        for i in range(self.n):
-            self.name.append(input('student name:'))
-            self.mark.append(int(input('enter mark:')))
-        for i in range(self.n):
-            print("student:",self.name[i],'; mark:',self.mark[i])
-        print('\nTotal mark of students=',sum(self.mark))
+  class student:
+  name=[]
+  mark=[]
+  def __init__(self):
+      self.n=int(input("enter the no of students:"))
+      for i in range(self.n):
+          self.name.append(input('student name:'))
+          self.mark.append(int(input('enter mark:')))
+       for i in range(self.n):
+           print("student:",self.name[i],'; mark:',self.mark[i])
+       print('\nTotal mark of students=',sum(self.mark))
 
-    s=student()
+   s=student()
   </code>
 </pre>
-  <h2 style="font-size: 3vw;">no 2</h2>
-  
-</html>            
+  <h2 style="font-size: 4vw;">no 2</h2>
+ <pre>
+  <code>
+  class area:
+    def __init__(self):
+        a = float(input('first side:'))  
+        b = float(input('second side:'))  
+        c = float(input('third side:'))
+        s = (a+b+c)/2
+        area = (s*(s-a)*(s-b)*(s-c))**0.5  
+        print("area of the triangle =%0.2f"%area)   
+    t1=area()
+  </code>
+</pre> 
+<h2 style="font-size: 4vw;">no 3</h2>
+ <pre>
+  <code>
+  class distance():
+    def __init__(self):
+        self.dist1,self.dist2=0,0
+    def read(self):
+        self.dist1=int(input('distance 1:'))
+        self.dist2=int(input('distance 2:'))
+    def disp(self):
+        print("distance 1:",self.dist1)
+        print("distance 2:" ,self.dist2)
+    def add(self):
+        print("total distance:",self.dist1+self.dist2)
+    def sub(self):
+        print("subtracted distance:",self.dist1-self.dist2)
+d=distance()
+i=1
+while(i==1):
+    print("\n\n1.read\n2.Display\n3.add\n4.subtract")
+    ch=int(input("Enter your choice:"))
+    if(ch==1):
+        d.read()
+    elif(ch==2):
+        d.disp()
+    elif(ch==3):
+        d.add()
+    elif(ch==4):
+        d.sub()
+    else:
+        print("Invalid Input…")
+  </code>
+</pre> 
+</html>           
