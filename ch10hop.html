@@ -21,19 +21,65 @@ h1 {
   <h2 style="font-size: 4vw;">no 1</h2>
 <pre>
   <code>
-  class student:
-  name=[]
-  mark=[]
-  def __init__(self):
-      self.n=int(input("enter the no of students:"))
-      for i in range(self.n):
-          self.name.append(input('student name:'))
-          self.mark.append(int(input('enter mark:')))
-       for i in range(self.n):
-           print("student:",self.name[i],'; mark:',self.mark[i])
-       print('\nTotal mark of students=',sum(self.mark))
+class student:
+  def __init__(self,name,mark):
+      self.name=name
+      self.mark=mark
+def prog():                
+        num= int(input("no of students:"))
+        tot_list=[]
+        for i in range(num):
+            name = input("name:")
+            mark=[]
+            for j in range(6):                
+                m=int(input("mark %d:"%(j+1)))
+                mark.append(m)
+            tot=student(name,mark)
+            tot_list.append(tot)
+        print("\ndisplay:")    
+        for s in tot_list:
+            print("\nname:",s.name)      
+            for j in range(6):
+                print("mark %d:"%(j+1),s.mark[j])
+            print("sum:",sum(s.mark))           
+prog()
 
-   s=student()
+SAMPLE OUTPUT:
+no of students:2
+name:ben 
+mark 1:10
+mark 2:10
+mark 3:10
+mark 4:10
+mark 5:10
+mark 6:10
+name:kevin
+mark 1:20
+mark 2:20
+mark 3:20
+mark 4:20
+mark 5:20
+mark 6:20
+
+display:
+
+name: ben
+mark 1: 10
+mark 2: 10
+mark 3: 10
+mark 4: 10
+mark 5: 10
+mark 6: 10
+sum: 60
+
+name: kevin
+mark 1: 20
+mark 2: 20
+mark 3: 20
+mark 4: 20
+mark 5: 20
+mark 6: 20
+sum: 120     
   </code>
 </pre>
   <h2 style="font-size: 4vw;">no 2</h2>
